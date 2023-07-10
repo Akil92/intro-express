@@ -1,6 +1,7 @@
 // Load ecpress
 const express = require("express");
 const path = require("path");
+const vehicle = require("./data/practice")
 
 //require the TO-DO "database"
 const todoDb = require("./data/todo-db");
@@ -30,9 +31,9 @@ app.get("/home", function(req, res) {
     res.render("home");
 });
 
-app.get("/todos", function(req, res) {
-    const students = todoDb.getAll();
-    res.render("todos/index", { students });
+app.get("/practice", function(req, res) {
+    const cars = vehicle.select();
+    res.render("todos/index", { cars });
     //todos/index refrences a template, not a path to a folder(the todos folder is coming from the voews folder)
     //second argument is the object, data
 });

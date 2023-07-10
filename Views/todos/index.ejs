@@ -7,13 +7,14 @@
     <title>First Express</title>
 </head>
 <body>
-   <h1>Class Roster</h1> 
+   <h1>Cars Available</h1> 
    <ul>
-    <% students.forEach(function(td) { %>
+    <% cars.forEach(function(td) { %>
       <li>
-       <%= td.firstName %>
-       <%= td.lastName %>
-       <%= td.age %>
+       <%= td.make %>
+       <%= td.model %>
+       <%=  td.year %>
+       <%=  td.miles %>
        - 
       </li>
     <% }); %>
